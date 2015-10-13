@@ -1,0 +1,19 @@
+<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-offset-4 col-lg-offset-4 col-md-4 col-lg-4">
+					<h1 class="text-center">Sign In with Devise & Social Apps</h1>
+					
+					 
+					  <% if user_signed_in? %>
+					   <p> You are signed in as :: <span style="color:red; font-size:xx-large;"><%= current_user.name %></span> </p>
+                       <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class=>"btn btn-primary btn-lg", :id=>'modal-launcher' %>
+                      <% else %>
+                         <%= link_to "Log in", new_user_session_path, :class=>"btn btn-primary btn-lg", :id=>'modal-launcher' %>
+  
+                     <% end %>
+					</button>
+				</div>	
+			</div>
+		</div>
+
+		
